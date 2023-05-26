@@ -1,0 +1,118 @@
+/* Background ------------------------------------ */
+
+body {
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/5e48e7b6-350d-48d9-96d6-de8ca173c89f/26c35d01-db23-4f28-b2eb-42490d7f4002/ID-id-20221219-popsignuptwoweeks-perspective_alpha_website_large.jpg") center center/cover no-repeat;
+}
+body:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--color-backdrop);
+  z-index: -1;
+}
+
+/* Container ------------------------------------ */
+
+.login {
+  display: grid;
+  min-height: 69vh;
+  place-content: center;
+}
+.login-container {
+  margin-block-end: 2rem;
+  padding: 3rem;
+  max-width: 28rem;
+  border-radius: 0.4rem;
+  background: var(--color-bg);
+}
+
+/* Input ---------------------------------------- */
+
+.input-label {
+  top: 1rem;
+  left: 1rem;
+}
+.input-field {
+  background-color: var(--color-input);
+  height: 3.2rem;
+  width: 100%;
+  padding-inline: 1rem;
+  color: white;
+}
+.input-field:focus {
+  border: 1px solid var(--color-forgot);
+}
+.input-field:focus ~ .label-size,
+.input-field:not(:placeholder-shown) ~ .label-size {
+  left: 1.06rem;
+  font-size: 0.6em;
+}
+
+/* Remember -------------------------------------- */
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: space-between;
+}
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.remember-input {
+  appearance: none;
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+}
+.remember-input::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: black;
+  display: none;
+}
+.remember-input:checked {
+  background-color: white;
+  border: 1px solid white;
+}
+.remember-input:checked::after {
+  display: block;
+}
+
+/* Media Query ----------------------------------- */
+
+@media (320px <= width <= 640px) {
+  body {
+    background: black;
+  }
+  .login-container {
+    margin-top: -1rem;
+    max-width: 100%;
+  }
+  .google {
+    max-width: 28rem;
+  }
+  .footer {
+    border-top: 2px solid gray;
+  }
+}
+
+@media (320px <= width <= 450px) {
+  .login-container {
+    padding-inline: 2rem;
+  }
+  .google {
+    max-width: 24rem;
+  }
+}

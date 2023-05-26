@@ -1,0 +1,282 @@
+/* Color ------------------------------------------- */
+
+:root {
+  --color-invalid: #e50914;
+  --color-invalid-hover: #f11722;
+  --color-valid: rgb(13, 150, 65);
+  --color-forgot: #0071eb;
+  --color-forgot-hover: #2786ec;
+  --color-line: rgb(247, 247, 247);
+  --color-flag: rgb(232, 225, 225);
+  --color-input: #333333;
+  --color-bg: rgba(0, 0, 0, 0.73);
+  --color-bg-2: rgba(0, 0, 0, 0.4);
+  --color-backdrop: rgba(0, 0, 0, 0.563);
+  --color-backdrop-2: transparent;
+  --color-footer: rgba(0, 0, 0, 0.345);
+  --color-footer-2: rgba(0, 0, 0, 0.886);
+  --color-footer-bg: #f3f3f3;
+  --color-footer-text: #737373;
+  --color-absolute: rgb(62, 62, 62);
+  --color-invalid-shadow: #e509146b;
+  --color-tab: #e5091489;
+  --header-box-shadow: inset 10rem 10rem 24rem rgba(0, 0, 0, 0.5), inset -10rem -10rem 24rem rgba(0, 0, 0, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text, Tag Style --------------------------------- */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+p,
+span {
+  font-weight: 300;
+}
+img,
+video {
+  max-width: 100%;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: black;
+  user-select: none;
+}
+
+/* Text Style ------------------------------------ */
+
+.text-white {
+  color: white;
+}
+.text-white-1 {
+  color: white;
+  font-weight: 500;
+}
+.text-black {
+  color: black;
+  line-height: 1.5;
+}
+.text-gray {
+  color: gray;
+}
+.text-blue {
+  font-size: 0.9rem;
+  color: var(--color-forgot);
+}
+.text-xl {
+  font-size: clamp(2rem, 10.4vw, 3.2rem);
+  font-weight: 600;
+}
+.text-lg {
+  font-size: clamp(1.2rem, 8.8vw, 2.8rem);
+  font-weight: 600;
+}
+.text-md {
+  font-size: clamp(0.8rem, 6vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.3;
+}
+.text-md-1 {
+  font-size: clamp(0.8rem, 4.8vw, 1.6rem);
+  font-weight: 300;
+  line-height: 1.3;
+}
+.text-sm {
+  font-size: clamp(0.6rem, 4.5vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.text-terms {
+  font-size: 0.8rem;
+  color: grey;
+}
+.text-terms-1 {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--color-forgot);
+}
+.text-error {
+  left: 0.1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: orange;
+  display: none;
+}
+.text-forgot {
+  cursor: pointer;
+  color: var(--color-forgot);
+}
+.text-check {
+  font-size: 1.6rem;
+  color: var(--color-invalid);
+}
+.text-center {
+  text-align: center;
+}
+.text-underline {
+  cursor: pointer;
+}
+.text-underline:hover {
+  text-decoration: underline;
+}
+.text-underline-1 {
+  font-size: 0.8rem;
+  color: gray;
+}
+.text-underline-1:hover {
+  text-decoration: underline;
+}
+.text-underline-2 {
+  color: white;
+}
+.text-underline-2:hover {
+  text-decoration: underline;
+}
+.text-change {
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+}
+.text-change-1 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: grey;
+}
+.text-change-2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-forgot);
+}
+.text-change-2:hover {
+  text-decoration: underline;
+}
+.text-phone {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: black;
+}
+.text-des {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-block: 0.8rem;
+  margin-inline: auto;
+  letter-spacing: 0.4px;
+  max-width: 28rem;
+}
+.text-des-1 {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+.text-check {
+  font-size: 1.6rem;
+  color: var(--color-invalid);
+}
+.text-icon {
+  font-size: 1.6rem;
+  margin-top: 0.6rem;
+}
+.text-icon-1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+.text-icon-2 {
+  font-size: 1.6rem;
+  color: var(--color-flag);
+}
+.text-table-head {
+  font-weight: 500;
+  color: white;
+}
+.text-content {
+  line-height: 3.6;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.text-content-1 {
+  text-align: start;
+  width: 14rem;
+  line-height: 3.2;
+  color: black;
+}
+.text-absolute {
+  display: none;
+  font-size: 0.76rem;
+  text-align: center;
+  color: var(--color-absolute);
+  line-height: 2;
+}
+.icon-circle {
+  padding-block: 0.62rem;
+  padding-inline: 0.76rem;
+  border: 3px solid var(--color-invalid);
+  border-radius: 100%;
+  margin-bottom: 2rem;
+  color: var(--color-invalid);
+}
+.icon-circle-2 {
+  padding: 0.6rem;
+  border: 3px solid var(--color-invalid);
+  border-radius: 100%;
+  margin-bottom: 2rem;
+  color: var(--color-invalid);
+}
+
+/* Margin Spacing -------------------------------- */
+
+.margin-top {
+  margin-top: 1rem;
+}
+.margin-top-1 {
+  margin-top: 1.4rem;
+}
+.margin-top-2 {
+  margin-top: 2.4rem;
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}
+.margin-bottom-1 {
+  margin-bottom: 1.4rem;
+}
+
+.margin-block {
+  margin-block: 1rem;
+}
+.margin-block-1 {
+  margin-block: 1.4rem;
+}
+
+.margin-inline {
+  margin-inline: auto;
+}
+.margin-left {
+  margin-left: 0.6rem;
+}
+.margin-right {
+  margin-right: 0.6rem;
+}

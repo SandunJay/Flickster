@@ -1,0 +1,185 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+header{
+	max-height:70px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header .logo
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #FFF;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+header .navigation
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+header .navigation li
+{
+    list-style: none;
+    margin: 0 10px; 
+}
+
+header .navigation li a
+{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px; 
+}
+
+header .navigation li a:hover{
+    color: #FFEB3B;
+}
+
+header .search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+header .search input{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background:transparent;
+    outline: none;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+}
+
+header .search input::placeholder{
+    color: #FFF;
+}
+
+header .search .fa-search{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #FFF;
+    border-right: 1px solid #FFF;
+    padding-right: 10px;
+}
+
+.banner{
+    background: #434978;
+    padding: 200px 100px 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .content{
+    max-width: 700px;
+}
+
+.banner .content h2{
+    font-size: 2.5em;
+    color: #FFF;
+}
+
+.banner .content p{
+    font-size: 1em;
+    color: #FFF;
+}
+
+.banner .content a{
+    display: inline-block;
+    background: #FFF;
+    color: #434978;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.banner .image{
+    filter: invert(1);
+    max-width: 400px;
+    margin-left: 50px;
+}
+
+
+/*here start css responsive*/
+@media(max-width:991px){
+    header
+    {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+    .banner
+    {
+        padding: 150px 20px 50px;
+        flex-direction: column-reverse;
+    }
+    .banner .image
+    {
+        margin-left: 0;
+        max-width:80% ;
+    }
+    .banner .content h2
+    {
+        font-size: 2em;
+    }
+    .form >*{
+    	align-items:center;
+    	max-height:50vh;
+    	max-width:60;
+    }
+        .update-button,
+        .logout-button,
+        .delete-button {
+          background-color: #4CAF50; /* Green background color */
+          border: none;
+          color: white;
+          padding: 5px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 4px;
+          max-width:60%;
+          max-height:60%;
+        }
+}
+
+@media(max-width:600px){
+    header .search
+    {
+        width: 100%;
+    }
+    .banner .image
+    {
+        margin-top: 30px;
+    }
+}

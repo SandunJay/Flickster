@@ -1,0 +1,209 @@
+/* Header ----------------------------------------- */
+
+.header {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 96vh;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/5e48e7b6-350d-48d9-96d6-de8ca173c89f/26c35d01-db23-4f28-b2eb-42490d7f4002/ID-id-20221219-popsignuptwoweeks-perspective_alpha_website_large.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-2);
+  box-shadow: var(--header-box-shadow);
+  border-bottom: 0.4rem solid var(--color-input);
+  z-index: 1;
+}
+.header-container {
+  max-width: 42rem;
+  padding-block: 4rem;
+  padding-inline: 4%;
+  z-index: 2;
+}
+.border-gray {
+  border-bottom: 0.4rem solid var(--color-input);
+}
+
+/* Features -------------------------------------- */
+
+.features {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(0.4rem, 1vh, 2rem);
+  padding-block: 4rem;
+  padding-inline: 6%;
+  max-width: 80rem;
+  min-height: 60vh;
+}
+.text-area {
+  display: grid;
+  gap: 1rem;
+}
+.img-area {
+  position: relative;
+  overflow: hidden;
+}
+.grid-reversed {
+  order: 2;
+}
+.video-1 {
+  pointer-events: none;
+  position: absolute;
+  height: 74%;
+  width: 73.2%;
+  top: 11%;
+  left: 13%;
+  z-index: -1;
+}
+.video-2 {
+  pointer-events: none;
+  position: absolute;
+  height: 78%;
+  width: 63%;
+  top: -6%;
+  left: 18%;
+  z-index: -1;
+}
+.download {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.6rem;
+  border: 1px solid gray;
+  border-radius: 0.6rem;
+  background: black;
+  width: 68%;
+}
+.download :first-child {
+  width: 18%;
+}
+.download :last-child {
+  width: 14%;
+}
+
+/* F.A.Q ----------------------------------------- */
+
+.faq {
+  display: grid;
+  gap: 2rem;
+  padding-block: 4rem;
+  padding-inline: 3%;
+}
+.faq-accordion {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 50rem;
+}
+.faq-input {
+  display: none;
+}
+.faq-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+  padding-inline: 3%;
+  background-color: var(--color-input);
+  border-bottom: 4px solid black;
+}
+.faq-content {
+  background-color: var(--color-input);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+.faq-content p {
+  margin: 2rem;
+}
+.faq-input:checked ~ .faq-content {
+  max-height: 60rem;
+  transition: max-height 0.3s ease-in;
+}
+.faq-input:checked ~ .faq-label i {
+  transform: rotate(45deg);
+  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+.membership .input {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* Media Query ------------------------------------ */
+
+/* Nav Media Query */
+
+@media (320px <= width <= 680px) {
+  .nav-4,
+  .footer {
+    padding-inline: 4%;
+  }
+}
+
+/* Body Media Query */
+
+@media (320px <= width <= 940px) {
+  .features {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .grid-reversed {
+    order: 0;
+  }
+  .img-area .devices {
+    width: 86%;
+  }
+  .video-2 {
+    height: 80%;
+    width: 53.3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .download {
+    width: 50%;
+  }
+  .faq-content p {
+    margin: 1rem;
+  }
+}
+@media (450px <= width <= 640px) {
+  .download {
+    width: 70%;
+  }
+}
+@media (350px <= width <= 520px) {
+  .header {
+    min-height: 93vh;
+  }
+  .down {
+    display: block;
+  }
+  .download {
+    width: 80%;
+  }
+}
+@media (320px <= width <= 350px) {
+  .header {
+    min-height: 80vh;
+  }
+  .down {
+    display: block;
+  }
+  .download {
+    width: 86%;
+    padding: 0.2rem;
+  }
+}
